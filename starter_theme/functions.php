@@ -33,7 +33,7 @@ function starter_theme_setup() {
 	if (!is_admin()) add_action("wp_enqueue_scripts", "load_js", 11);
 	function load_js() {
 		wp_deregister_script('jquery');
-		wp_enqueue_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", array(), false, true);
+		wp_enqueue_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", array(), false, true);
 		wp_enqueue_script('plugin',get_template_directory_uri() . '/js/plugin.js',
 		array( 'jquery' ), false, true);
 		wp_enqueue_script('scripts',get_template_directory_uri() . '/js/scripts.js',
