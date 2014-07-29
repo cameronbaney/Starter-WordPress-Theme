@@ -1,1 +1,1 @@
-# Starter WordPress theme with SASS and Bootstrap
+# Starter WordPress theme with Sass, Gulp and Bootstrap
