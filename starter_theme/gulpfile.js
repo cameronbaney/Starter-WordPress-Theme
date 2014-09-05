@@ -9,8 +9,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     notify = require('gulp-notify'),
-    pngcrush = require('imagemin-pngcrush'),
-    bower = require('gulp-bower');
+    pngcrush = require('imagemin-pngcrush');
 
 // CSS
 gulp.task('styles', function() {
