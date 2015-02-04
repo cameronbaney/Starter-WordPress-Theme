@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
   return gulp.src('src/css/style.scss')
     .pipe(sass({ style: 'expanded' }))
-    .pipe(autoprefixer('last 2 version', 'safari 5.1', 'ie 8', 'ie 9', 'ios 6', 'android 4'))
+    .pipe(autoprefixer('last 2 version', 'safari 6', 'ie 9', 'ios 6', 'android 4'))
     .pipe(gulp.dest('css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css'))
@@ -63,6 +63,13 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
+// Copy files to dist
+gulp.task('copyTask', function() {
+  // JS library
+  gulp.src('src/js/lib/**/*')
+    .pipe(gulp.dest('js/lib'));
+});
+
 // Default Tasks
 gulp.task('default', ['clean'], function() {
     gulp.start('styles', 'scripts', 'scripts-plugin', 'images');
@@ -82,5 +89,4 @@ gulp.task('watch', function() {
 
   // Watch image files
   gulp.watch('src/img/**/*', ['images']);
-
 });
