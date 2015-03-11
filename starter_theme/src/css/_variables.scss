@@ -1,37 +1,32 @@
 // COLORS
 // -------------------------
 $white:									#fff !default;
-$black: 		            #333 !default;
+$grayDark:              #333 !default;
+$blue:                  #049cdb !default;
 
 // Scaffolding
 // -------------------------
 $bodyBackground:        $white !default;
-$textColor:             $black !default;
+$textColor:             $grayDark !default;
 
 
 // Links
 // -------------------------
-$linkColor:             $red !default;
-$linkColorHover:        $redDark !default;
+$linkColor:             $blue !default;
+$linkColorHover:        darken($linkColor, 15%) !default;
 
 // Transitions
 // -------------------------
 $cbTrans: 							cubic-bezier(0.165, 0.84, 0.44, 1);
 $pageTrans: 						cubic-bezier(.54,.06,.55,.97);
 
-// Kerning
-// -------------------------
-$kerning50: 						1px;
-$kerning100: 						2px;
-$kerning150: 						3px;
-
 // TYPOGRAPHY
 // -------------------------
 $fontFamily:						"Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-$baseFontSize:          14px !default;
-$baseFontFamily:        $serifFontFamily !default;
-$baseLineHeight:        24px !default;
+$baseFontSize:          16px !default;
+$baseFontFamily:        $fontFamily !default;
+$baseLineHeight:        23px !default;
 
 $headingsFontFamily:    inherit !default;
 $headingsFontWeight:    bold !default;
