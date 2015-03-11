@@ -3,18 +3,15 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
-    imagemin = require('gulp-imagemin'),
     clean = require('gulp-clean'),
     cache = require('gulp-cache'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    notify = require('gulp-notify'),
-    pngcrush = require('imagemin-pngcrush');
+    notify = require('gulp-notify');
 
 // CSS
 gulp.task('styles', function() {
-  return gulp.src('src/css/style.scss')
-    .pipe(sass({ style: 'expanded' }))
+  return sass('src/css/style.scss')
     .pipe(autoprefixer('last 2 version', 'safari 6', 'ie 9', 'ios 6', 'android 4'))
     .pipe(gulp.dest('css'))
     .pipe(rename({suffix: '.min'}))
@@ -46,17 +43,6 @@ gulp.task('scripts-plugin', function() {
     .pipe(notify({ message: 'Plugins task complete' }));
 });
 
-// Images
-gulp.task('images', function() {
-  return gulp.src('src/img/**/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false, cleanupIDs: true}]
-    }))
-    .pipe(gulp.dest('img'))
-    .pipe(notify({ message: 'Images task complete' }));
-});
-
 // Clean dist folder
 gulp.task('clean', function() {
   return gulp.src(['css', 'js', 'img'], {read: false})
@@ -72,7 +58,7 @@ gulp.task('copyTask', function() {
 
 // Default Tasks
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'scripts-plugin', 'images');
+    gulp.start('styles', 'scripts', 'scripts-plugin');
 });
 
 // Watch tasks
@@ -86,7 +72,4 @@ gulp.task('watch', function() {
 
   // Watch plugin .js files
   gulp.watch('src/js/plugins/*.js', ['scripts-plugin']);
-
-  // Watch image files
-  gulp.watch('src/img/**/*', ['images']);
 });
