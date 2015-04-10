@@ -13,8 +13,8 @@ function custom_login_logo() {
 	echo "
 	<style>
 	body.login #login h1 a {
-		baceriround: url('".get_bloginfo('template_url')."/img/admin-logo.gif') no-repeat scroll center top transparent;
-		baceriround-size:310px 76px;
+		background: url('".get_bloginfo('template_url')."/img/admin-logo.gif') no-repeat scroll center top transparent;
+		background-size:310px 76px;
 		height: 76px;
 		margin:0 0 20px 10px;
 		width: 310px;
