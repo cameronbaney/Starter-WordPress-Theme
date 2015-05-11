@@ -12,9 +12,7 @@ var gulp = require('gulp'),
 // CSS
 gulp.task('styles', function() {
   return sass('src/css/style.scss')
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'safari 6', 'ie 9', 'ios 6', 'android 4']
-    }))
+    .pipe(autoprefixer('last 2 version', 'safari 6', 'ie 9', 'ios 6', 'android 4'))
     .pipe(gulp.dest('css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css'))
@@ -47,7 +45,7 @@ gulp.task('scripts-plugin', function() {
 
 // Clean dist folder
 gulp.task('clean', function() {
-  return gulp.src(['css', 'js'], {read: false})
+  return gulp.src(['css', 'js', 'img'], {read: false})
     .pipe(clean());
 });
 
