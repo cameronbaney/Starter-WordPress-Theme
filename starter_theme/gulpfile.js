@@ -12,7 +12,9 @@ var gulp = require('gulp'),
 // CSS
 gulp.task('styles', function() {
   return sass('src/css/style.scss')
-    .pipe(autoprefixer('last 2 version', 'safari 6', 'ie 9', 'ios 6', 'android 4'))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions', 'safari 6', 'ie 9', 'ios 6', 'android 4']
+    }))
     .pipe(gulp.dest('css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css'))
