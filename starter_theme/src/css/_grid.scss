@@ -263,3 +263,83 @@
   .col-md-offset-10 { margin-left: percentage((10/ $grid-columns)); }
   .col-md-offset-11 { margin-left: percentage((11/ $grid-columns)); }
 }
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+//
+// Note that `.col-lg-12` doesn't get floated on purpose—there's no need since
+// it's full-width.
+
+@media (min-width: $screen-lg-desktop) {
+  .container {
+    max-width: $container-lg-desktop;
+  }
+
+  .col-lg-1,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-lg-10,
+  .col-lg-11 {
+    float: left;
+  }
+  .col-lg-1  { width: percentage((1 / $grid-columns)); }
+  .col-lg-2  { width: percentage((2 / $grid-columns)); }
+  .col-lg-3  { width: percentage((3 / $grid-columns)); }
+  .col-lg-4  { width: percentage((4 / $grid-columns)); }
+  .col-lg-5  { width: percentage((5 / $grid-columns)); }
+  .col-lg-6  { width: percentage((6 / $grid-columns)); }
+  .col-lg-7  { width: percentage((7 / $grid-columns)); }
+  .col-lg-8  { width: percentage((8 / $grid-columns)); }
+  .col-lg-9  { width: percentage((9 / $grid-columns)); }
+  .col-lg-10 { width: percentage((10/ $grid-columns)); }
+  .col-lg-11 { width: percentage((11/ $grid-columns)); }
+  .col-lg-12 { width: 100%; }
+
+  // Push and pull columns for source order changes
+  .col-lg-push-0  { left: auto; }
+  .col-lg-push-1  { left: percentage((1 / $grid-columns)); }
+  .col-lg-push-2  { left: percentage((2 / $grid-columns)); }
+  .col-lg-push-3  { left: percentage((3 / $grid-columns)); }
+  .col-lg-push-4  { left: percentage((4 / $grid-columns)); }
+  .col-lg-push-5  { left: percentage((5 / $grid-columns)); }
+  .col-lg-push-6  { left: percentage((6 / $grid-columns)); }
+  .col-lg-push-7  { left: percentage((7 / $grid-columns)); }
+  .col-lg-push-8  { left: percentage((8 / $grid-columns)); }
+  .col-lg-push-9  { left: percentage((9 / $grid-columns)); }
+  .col-lg-push-10 { left: percentage((10/ $grid-columns)); }
+  .col-lg-push-11 { left: percentage((11/ $grid-columns)); }
+
+  .col-lg-pull-0  { right: auto; }
+  .col-lg-pull-1  { right: percentage((1 / $grid-columns)); }
+  .col-lg-pull-2  { right: percentage((2 / $grid-columns)); }
+  .col-lg-pull-3  { right: percentage((3 / $grid-columns)); }
+  .col-lg-pull-4  { right: percentage((4 / $grid-columns)); }
+  .col-lg-pull-5  { right: percentage((5 / $grid-columns)); }
+  .col-lg-pull-6  { right: percentage((6 / $grid-columns)); }
+  .col-lg-pull-7  { right: percentage((7 / $grid-columns)); }
+  .col-lg-pull-8  { right: percentage((8 / $grid-columns)); }
+  .col-lg-pull-9  { right: percentage((9 / $grid-columns)); }
+  .col-lg-pull-10 { right: percentage((10/ $grid-columns)); }
+  .col-lg-pull-11 { right: percentage((11/ $grid-columns)); }
+
+  // Offsets
+  .col-lg-offset-0  { margin-left: 0; }
+  .col-lg-offset-1  { margin-left: percentage((1 / $grid-columns)); }
+  .col-lg-offset-2  { margin-left: percentage((2 / $grid-columns)); }
+  .col-lg-offset-3  { margin-left: percentage((3 / $grid-columns)); }
+  .col-lg-offset-4  { margin-left: percentage((4 / $grid-columns)); }
+  .col-lg-offset-5  { margin-left: percentage((5 / $grid-columns)); }
+  .col-lg-offset-6  { margin-left: percentage((6 / $grid-columns)); }
+  .col-lg-offset-7  { margin-left: percentage((7 / $grid-columns)); }
+  .col-lg-offset-8  { margin-left: percentage((8 / $grid-columns)); }
+  .col-lg-offset-9  { margin-left: percentage((9 / $grid-columns)); }
+  .col-lg-offset-10 { margin-left: percentage((10/ $grid-columns)); }
+  .col-lg-offset-11 { margin-left: percentage((11/ $grid-columns)); }
+}
